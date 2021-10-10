@@ -1,0 +1,52 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerAttack : MonoBehaviour
+{
+    public int damage;
+    public float starTime;
+    public float time;
+
+    private Animator anim;
+    private PolygonCollider2D collider2D;
+    // Start is called before the first frame update
+    void Start()
+    {
+        anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+        collider2D = GetComponent<PolygonCollider2D>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        attack();
+    }
+
+    void attack()
+    {
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+           
+            anim.SetTrigger("Attack");
+            StartCoroutine(StarAttack());
+        }
+        else
+        {
+            anim.SetTrigger("idle");
+        }
+    }
+    IEnumerator StarAttack()
+    {
+        yield return new WaitForSeconds(starTime);
+        collider2D.enabled = true;
+        StartCoroutine(disableHitBox());
+    }
+
+
+    IEnumerator disableHitBox()
+    {
+        yield return new WaitForSeconds(time);
+        collider2D.enabled = false;
+    }
+}
