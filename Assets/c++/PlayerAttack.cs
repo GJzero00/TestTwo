@@ -49,4 +49,12 @@ public class PlayerAttack : MonoBehaviour
         yield return new WaitForSeconds(time);
         collider2D.enabled = false;
     }
+
+     void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("enemies"))
+        {
+            other.GetComponent<EnemyBoss>().TackDamage(damage);
+        }
+    }
 }

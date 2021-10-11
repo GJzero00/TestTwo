@@ -57,11 +57,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\c++\Playercontroller.cs" />
+    <Compile Include="Assets\c++\EnterBoss.cs" />
     <Compile Include="Assets\c++\EnterDialog.cs" />
     <Compile Include="Assets\c++\CameraControl.cs" />
     <Compile Include="Assets\c++\EnterHome.cs" />
     <Compile Include="Assets\c++\PlayerAttack.cs" />
-    <Compile Include="Assets\c++\EnterBoss.cs" />
+    <Compile Include="Assets\c++\EnemyBoss.cs" />
+    <Compile Include="Assets\c++\Enemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
