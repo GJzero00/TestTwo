@@ -27,9 +27,8 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.J))
         {
-           
             anim.SetTrigger("Attack");
-            StartCoroutine(StarAttack());
+            StartCoroutine(StarAttack());     
         }
         else
         {
