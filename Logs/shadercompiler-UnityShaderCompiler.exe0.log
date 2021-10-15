@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 Base path: 'E:/nuity/2020.3.14f1/Editor/Data', plugins path 'E:/nuity/2020.3.14f1/Editor/Data/PlaybackEngines'
+=======
+Base path: 'D:/unityhub/2020.3.14f1/Editor/Data', plugins path 'D:/unityhub/2020.3.14f1/Editor/Data/PlaybackEngines'
+>>>>>>> 34ff1f21f4f0e8b10a986ed354c14b6e81142275
 Cmd: initializeCompiler
 
-Cmd: shutdown

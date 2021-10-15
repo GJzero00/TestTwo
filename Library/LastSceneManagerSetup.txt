@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Della home.unity
+=======
+- path: Assets/Scenes/mainsceen.unity
+>>>>>>> 34ff1f21f4f0e8b10a986ed354c14b6e81142275
   isLoaded: 1
   isActive: 1
   isSubScene: 0
