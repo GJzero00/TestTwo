@@ -12,11 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Prologue.unity
     guid: 3d6dde84b1e009b4eab0d973c732d82c
   - enabled: 1
-    path: Assets/Scenes/Della home.unity
-    guid: a952d89cc1bdac24a8f386f2237fc6d6
+    path: Assets/Scenes/market.unity
+    guid: 931bd4ffe0b19a1488b7624166c936ed
   - enabled: 1
+    path: Assets/Scenes/MakePlayer.unity
+    guid: c8165475b8ec4d34c837d1922764b26c
+  - enabled: 0
     path: Assets/Scenes/playrt test.unity
     guid: 72be79625749c0b44808c092f1ab6eee
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729

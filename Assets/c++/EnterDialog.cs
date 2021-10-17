@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnterDialog : MonoBehaviour
 {
     public GameObject enterDialog;
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
@@ -11,7 +11,7 @@ public class EnterDialog : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {

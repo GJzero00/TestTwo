@@ -8,9 +8,11 @@ public class EnterHome : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }   
+
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    } 
 }

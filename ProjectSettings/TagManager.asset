@@ -7,6 +7,7 @@ TagManager:
   - key
   - coin
   - enemies
+  - Collection
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - UI
   - Ground
   - background
-  - 
+  - UI2
   - 
   - 
   - 
@@ -47,17 +48,26 @@ TagManager:
   - name: back
     uniqueID: 1853271711
     locked: 0
-  - name: home
-    uniqueID: 4180068009
-    locked: 0
   - name: ground
     uniqueID: 3948335477
     locked: 0
   - name: collection
     uniqueID: 1003736039
     locked: 0
+  - name: back2
+    uniqueID: 4180068009
+    locked: 0
   - name: Boss
     uniqueID: 622814073
+    locked: 0
+  - name: thing
+    uniqueID: 2745478331
+    locked: 0
+  - name: store
+    uniqueID: 2651348487
+    locked: 0
+  - name: NPC
+    uniqueID: 928200529
     locked: 0
   - name: role
     uniqueID: 2816014313

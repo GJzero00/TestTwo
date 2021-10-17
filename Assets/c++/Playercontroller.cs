@@ -53,7 +53,7 @@ public class Playercontroller : MonoBehaviour
 
         SwitchAnim();
 
-        
+       
     }
     void GroundMovement()
     {
@@ -119,10 +119,12 @@ public class Playercontroller : MonoBehaviour
             Destroy(collision.gameObject);
             Key += 1;
         }
-
-
     }
 
+    
+    
+      
+    
     /*private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "enemies") 
