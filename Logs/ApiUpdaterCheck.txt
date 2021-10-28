@@ -8,3 +8,13 @@ C# parse time         : 211ms
 candidates check time : 26ms
 console write time    : 0ms
 
+[api-updater (non-obsolete-error-filter)] 2021/10/28 上午 01:31:12 : Starting E:/nuity/2020.3.14f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 1453.275ms
+moved types parse time: 385ms
+candidates parse time : 9ms
+C# parse time         : 685ms
+candidates check time : 29ms
+console write time    : 1ms
+
