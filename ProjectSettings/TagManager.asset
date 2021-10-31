@@ -9,6 +9,7 @@ TagManager:
   - enemies
   - Collection
   - UI
+  - NPC
   layers:
   - Default
   - TransparentFX

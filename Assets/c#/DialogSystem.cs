@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DialogSystem : MonoBehaviour
 {
+    public int Take;
+
     [Header("UI²Õ¥ó")]
     public Text textLabel;
     public Image faceImage;
@@ -24,6 +26,7 @@ public class DialogSystem : MonoBehaviour
     void Awake()
     {
         GetTextFormFile(textFile);
+        Take++;
     }
     private void OnEnable()
     {
@@ -68,22 +71,23 @@ public class DialogSystem : MonoBehaviour
         textFinished = false;
         textLabel.text = "";
 
-        switch (textList[index])
+        switch (textList[index].Trim().ToString())
+
         {
             case "A":
-                faceImage.sprite = face01;
-                index++;
-                break;
+            faceImage.sprite = face01;
+            index++;
+            break;
             case "B":
-                faceImage.sprite = face02;
-                index++;
-                break;
+            faceImage.sprite = face02;
+            index++;
+            break;
         }
-        
 
-        
 
-        for(int i = 0;i < textList[index].Length; i++)
+
+
+        for (int i = 0;i < textList[index].Length; i++)
         {
             textLabel.text += textList[index][i];
 
@@ -91,5 +95,6 @@ public class DialogSystem : MonoBehaviour
         }
         textFinished = true;
         index++;
+        
     }
 }

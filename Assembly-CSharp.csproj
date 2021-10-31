@@ -66,6 +66,7 @@
     <Compile Include="Assets\c#\UIWSControl.cs" />
     <Compile Include="Assets\c#\Enemy.cs" />
     <Compile Include="Assets\c#\PrologueNextScence.cs" />
+    <Compile Include="Assets\c#\DialogSystem.cs" />
     <Compile Include="Assets\c#\JRTDia.cs" />
     <Compile Include="Assets\c#\JRTE.cs" />
     <Compile Include="Assets\c#\UI.cs" />
@@ -77,7 +78,6 @@
     <Compile Include="Assets\c#\CameraControl.cs" />
     <Compile Include="Assets\c#\EnterHome.cs" />
     <Compile Include="Assets\c#\PlayerAttack.cs" />
-    <Compile Include="Assets\c#\DialogSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

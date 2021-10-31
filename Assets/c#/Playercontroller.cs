@@ -13,16 +13,22 @@ public class Playercontroller : MonoBehaviour
     public float speed, jumpForce;
     public Transform groundCheck;
     public LayerMask ground;
-    public int Coin, Key;
+    public int Coin, Key,Q;
 
     
 
     public Text CoinNum;
+  
 
     public bool isGround, isJump;
     
     bool jumpPressed;
     int jumpCount;
+
+    public GameObject BossTrigger;
+    public GameObject Panel;
+
+
 
 
     void Start()
@@ -53,7 +59,7 @@ public class Playercontroller : MonoBehaviour
 
         SwitchAnim();
 
-       
+        take();
     }
     void GroundMovement()
     {
@@ -106,7 +112,7 @@ public class Playercontroller : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "coin")
         {
@@ -118,13 +124,29 @@ public class Playercontroller : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Key += 1;
+            CoinNum.text = Coin.ToString();
         }
+        if(collision.tag == "NPC")
+        {
+            Q = 1;
+            CoinNum.text = Coin.ToString();         
+        }
+        
+    }
+   public void take()
+    {
+        if (Q == 1 )
+        {
+            BossTrigger.SetActive(true);
+        }
+        else
+            BossTrigger.SetActive(false);
     }
 
-    
-    
-      
-    
+
+
+
+
     /*private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "enemies") 
