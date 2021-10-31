@@ -24,7 +24,7 @@ public class JRTDia : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Button.activeSelf && Input.GetKeyDown(KeyCode.E))
+        if (Button.activeSelf && Input.GetKeyDown(KeyCode.F))
         {
             talkUI.SetActive(true);
         }
