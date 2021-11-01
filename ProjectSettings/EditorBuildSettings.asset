@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PassAim.unity
     guid: ad0696a10d31c4e428678bda11203162
+  - enabled: 1
+    path: Assets/Scenes/BOSSAim.unity
+    guid: 3bb2b0097a0ed0c4a8a6c2d21f28e39f
   m_configObjects: {}

@@ -129,7 +129,7 @@ public class Playercontroller : MonoBehaviour
         if(collision.tag == "NPC")
         {
             Q = 1;
-            CoinNum.text = Coin.ToString();         
+                     
         }
         
     }

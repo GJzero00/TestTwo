@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/PassAim.unity
+- path: Assets/Scenes/mainsceen.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
