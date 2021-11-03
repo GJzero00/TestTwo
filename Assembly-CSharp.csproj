@@ -47,6 +47,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\c#\KeyDowneffect.cs" />
      <Compile Include="Assets\c#\Playercontroller.cs" />
      <Compile Include="Assets\c#\NextScence.cs" />
      <Compile Include="Assets\c#\PauseMenu.cs" />
@@ -68,6 +69,7 @@
      <Compile Include="Assets\c#\FullScreenControl.cs" />
      <Compile Include="Assets\c#\CameraControl.cs" />
      <Compile Include="Assets\c#\EnterHome.cs" />
+     <Compile Include="Assets\c#\EnterAim.cs" />
      <Compile Include="Assets\c#\PlayerAttack.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
