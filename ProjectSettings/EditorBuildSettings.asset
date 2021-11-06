@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/\u9F8D\u5957\u5E02\u5834/BOSSAim.unity"
     guid: 3bb2b0097a0ed0c4a8a6c2d21f28e39f
+  - enabled: 1
+    path: "Assets/Scenes/\u9F8D\u5957\u5E02\u5834/FightBoss.unity"
+    guid: 51ac3155ad6e09849994085fbe4c34fd
   m_configObjects: {}

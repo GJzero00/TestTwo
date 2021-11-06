@@ -10,6 +10,7 @@ TagManager:
   - Collection
   - UI
   - NPC
+  - CD
   layers:
   - Default
   - TransparentFX
@@ -56,24 +57,30 @@ TagManager:
   - name: back2
     uniqueID: 4180068009
     locked: 0
-  - name: ground
-    uniqueID: 3948335477
-    locked: 0
   - name: Boss
     uniqueID: 622814073
-    locked: 0
-  - name: thing
-    uniqueID: 2745478331
     locked: 0
   - name: back3
     uniqueID: 2651348487
     locked: 0
+  - name: back4
+    uniqueID: 2194261001
+    locked: 0
+  - name: ground
+    uniqueID: 3948335477
+    locked: 0
+  - name: thing
+    uniqueID: 2745478331
+    locked: 0
   - name: NPC
     uniqueID: 928200529
     locked: 0
-  - name: role
-    uniqueID: 2816014313
+  - name: store
+    uniqueID: 1368377697
     locked: 0
   - name: boss
     uniqueID: 69449045
+    locked: 0
+  - name: role
+    uniqueID: 2816014313
     locked: 0

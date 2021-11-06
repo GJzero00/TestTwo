@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
+  damagelight: 0
   starTime: 0.3
   time: 0.2
 --- !u!1 &5743338361170569199
@@ -147,6 +148,8 @@ GameObject:
   - component: {fileID: 5743338361610869276}
   - component: {fileID: 5743338361610869279}
   - component: {fileID: 5743338361610869278}
+  - component: {fileID: 6096786460831592220}
+  - component: {fileID: 6076534834778589208}
   - component: {fileID: 5743338361610869267}
   - component: {fileID: 5743338361610869266}
   - component: {fileID: 5743338361610869277}
@@ -213,7 +216,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1478952983
-  m_SortingLayer: 6
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: be00fcc1b0401fa4a9af14de3f534c00, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -245,6 +248,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6096786460831592220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743338361610869273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f8fa004db956f4a87e3df6f0753ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dieUI: {fileID: 0}
+--- !u!114 &6076534834778589208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743338361610869273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e742a66039d9d14f947c990c5251212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  dieTime: 0
 --- !u!114 &5743338361610869267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,8 +294,6 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 64
-  Coin: 0
-  Key: 0
   CoinNum: {fileID: 0}
   isGround: 0
   isJump: 0

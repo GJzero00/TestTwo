@@ -12,6 +12,7 @@ public class EnemyBoss : Enemy
     public Transform leftDownPos;
     public Transform rightUpPos;
 
+
     // Start is called before the first frame update
     public void Start()
     {

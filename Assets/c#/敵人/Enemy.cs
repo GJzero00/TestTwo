@@ -6,24 +6,38 @@ public abstract class Enemy : MonoBehaviour
 {
     public int health;
     public int damage;
-    // Start is called before the first frame update
+
+    private PlayerHealth playerHealth;
+    
     public void Start()
     {
-
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 
-    // Update is called once per frame
+    
     public void Update()
     {
         if (health <= 0)
         {
             Destroy(gameObject);
         }
-
+        
     }
 
     public void TackDamage(int damage)
     {
         health -= damage;
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.BoxCollider2D")
+        {
+            if (playerHealth != null)
+            {
+                playerHealth.DamegePlayer(damage);
+            }
+        }
+    }
+   
 }

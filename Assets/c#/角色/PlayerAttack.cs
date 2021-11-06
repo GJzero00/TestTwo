@@ -1,37 +1,49 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.UI;
+
 
 public class PlayerAttack : MonoBehaviour
 {
     public int damage;
+    public int damagelight;
     public float starTime;
     public float time;
+    
 
     private Animator anim;
     private PolygonCollider2D collider2D;
-    // Start is called before the first frame update
+
+
+    bool Animcheck;
+
+
     void Start()
     {
         anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         collider2D = GetComponent<PolygonCollider2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         attack();
     }
 
+
     void attack()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.D))
         {
+            Animcheck = true;
             anim.SetTrigger("Attack");
-            StartCoroutine(StarAttack());     
+            StartCoroutine(StarAttack());
         }
         else
         {
+            Animcheck = false;
             anim.SetTrigger("idle");
         }
     }
@@ -47,13 +59,22 @@ public class PlayerAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         collider2D.enabled = false;
+        StartCoroutine(attackcheck());
     }
 
-     void OnTriggerEnter2D(Collider2D other)
+    IEnumerator attackcheck()
+    {
+        yield return new WaitForSeconds(2);
+        Animcheck = true;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("enemies"))
         {
-            other.GetComponent<EnemyBoss>().TackDamage(damage);
+            other.GetComponent<BossTrack>().TackDamage(damage);
         }
     }
 }
+
+

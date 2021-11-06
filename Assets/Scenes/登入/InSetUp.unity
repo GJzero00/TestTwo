@@ -1724,6 +1724,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4710789038565272578, guid: 8bae55dd184ed9e4e8ab8f129b587bd4, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4710789038565272579, guid: 8bae55dd184ed9e4e8ab8f129b587bd4, type: 3}
       propertyPath: m_Name
       value: "\u4E3B\u8981\u97F3\u6A02"
@@ -1953,11 +1957,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6755543568394359845, guid: b03dcd29e13acba47a4484530006964b, type: 3}
       propertyPath: m_Value
-      value: 1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6755543568394359845, guid: b03dcd29e13acba47a4484530006964b, type: 3}
       propertyPath: m_MaxValue
-      value: 1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6755543568394359845, guid: b03dcd29e13acba47a4484530006964b, type: 3}
       propertyPath: m_MinValue

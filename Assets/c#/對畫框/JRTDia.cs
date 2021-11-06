@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class JRTDia : MonoBehaviour
 {
+
+  
+    
     public GameObject Button;
     public GameObject talkUI;
-    // Start is called before the first frame update
+    
+ 
     private void OnTriggerEnter2D(Collider2D other)
     {
         Button.SetActive(true);
@@ -19,16 +23,17 @@ public class JRTDia : MonoBehaviour
     }
     private void Start()
     {
-       
+        
     }
-    // Update is called once per frame
+
     private void Update()
     {
         if (Button.activeSelf && Input.GetKeyDown(KeyCode.F))
         {
             talkUI.SetActive(true);
+          
         }
-      
+
     }
 
 }

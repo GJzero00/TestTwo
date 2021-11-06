@@ -13,9 +13,8 @@ public class Playercontroller : MonoBehaviour
     public float speed, jumpForce;
     public Transform groundCheck;
     public LayerMask ground;
-    public int Coin, Key,Q;
+    // public int Coin, Key;
 
-    
 
     public Text CoinNum;
   
@@ -25,8 +24,6 @@ public class Playercontroller : MonoBehaviour
     bool jumpPressed;
     int jumpCount;
 
-    public GameObject BossTrigger;
-    public GameObject Panel;
 
 
 
@@ -39,16 +36,16 @@ public class Playercontroller : MonoBehaviour
     }
 
 
-     void Update()
+    void Update()
     {
         if(Input.GetButtonDown("Jump") && jumpCount > 0)
         {
             jumpPressed = true;
         }
-
+        
         //attack();
     }
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
 
         isGround = Physics2D.OverlapCircle(groundCheck.position, 0.1f, ground);
@@ -58,10 +55,11 @@ public class Playercontroller : MonoBehaviour
         Jump();
 
         SwitchAnim();
+        
+        
 
-        take();
     }
-    void GroundMovement()
+    public  void GroundMovement()
     {
         float horizontalMove = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontalMove * speed, rb.velocity.y);
@@ -112,9 +110,10 @@ public class Playercontroller : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    /* private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.tag == "coin")
+       
+       if (collision.tag == "coin")
         {
             Destroy(collision.gameObject);
             Coin += 1;
@@ -126,23 +125,9 @@ public class Playercontroller : MonoBehaviour
             Key += 1;
             CoinNum.text = Coin.ToString();
         }
-        if(collision.tag == "NPC")
-        {
-            Q = 1;
-                     
-        }
-        
-    }
-   public void take()
-    {
-        if (Q == 1 )
-        {
-            BossTrigger.SetActive(true);
-        }
-        else
-            BossTrigger.SetActive(false);
-    }
 
+
+}*/
 
 
 
