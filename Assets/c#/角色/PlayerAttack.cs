@@ -12,38 +12,70 @@ public class PlayerAttack : MonoBehaviour
     public int damagelight;
     public float starTime;
     public float time;
-    
+    public int playerproperty;//black=0 white=1;
+    public int enemyproperty;
+
 
     private Animator anim;
     private PolygonCollider2D collider2D;
 
+    bool SwitchQ;
 
-    bool Animcheck;
+
+
+
 
 
     void Start()
     {
         anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         collider2D = GetComponent<PolygonCollider2D>();
+
     }
 
     void Update()
     {
+
         attack();
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (SwitchQ)
+            {
+                Black();
+
+            }
+            else
+            {
+                White();
+            }
+        }
+
     }
 
+    private void White()
+    {
+        playerproperty = 1;
+        SwitchQ = true;
+    }
+
+    private void Black()
+    {
+        playerproperty = 0;
+        SwitchQ = false;
+    }
 
     void attack()
     {
         if (Input.GetKeyDown(KeyCode.D))
         {
-            Animcheck = true;
+
             anim.SetTrigger("Attack");
+            anim.SetBool("idle", false);
             StartCoroutine(StarAttack());
         }
         else
         {
-            Animcheck = false;
+            anim.SetBool("idle", true);
             anim.SetTrigger("idle");
         }
     }
@@ -59,20 +91,18 @@ public class PlayerAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         collider2D.enabled = false;
-        StartCoroutine(attackcheck());
+
     }
 
-    IEnumerator attackcheck()
-    {
-        yield return new WaitForSeconds(2);
-        Animcheck = true;
-    }
+
+
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("enemies"))
         {
-            other.GetComponent<BossTrack>().TackDamage(damage);
+            other.GetComponent<BossTrack>().TackDamage(damage, playerproperty, enemyproperty);
         }
     }
 }

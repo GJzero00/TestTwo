@@ -8,30 +8,43 @@ public abstract class Enemy : MonoBehaviour
     public int damage;
 
     private PlayerHealth playerHealth;
-    
+
     public void Start()
     {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 
-    
+
     public void Update()
     {
         if (health <= 0)
         {
             Destroy(gameObject);
         }
-        
+
     }
 
-    public void TackDamage(int damage)
+    public void TackDamage(int damage, int playerproperty, int enemyproperty)//
     {
-        health -= damage;
+        if (playerproperty == enemyproperty)
+        {
+            health -= 0;
+        }
+        else
+        {
+            health -= damage;
+        }
+
+
+    }
+    public void NotTackDamage(int damage)
+    {
+        health -= 0;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.BoxCollider2D")
+        if (other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.BoxCollider2D")
         {
             if (playerHealth != null)
             {
@@ -39,5 +52,7 @@ public abstract class Enemy : MonoBehaviour
             }
         }
     }
-   
+
 }
+
+

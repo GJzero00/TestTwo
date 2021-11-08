@@ -71,6 +71,7 @@
      <Compile Include="Assets\c#\對畫框\EnterDialog.cs" />
      <Compile Include="Assets\c#\FullScreenControl.cs" />
      <Compile Include="Assets\c#\登入\Next.cs" />
+     <Compile Include="Assets\c#\角色\SwitchQ.cs" />
      <Compile Include="Assets\c#\音樂C#\slider1.cs" />
      <Compile Include="Assets\c#\CameraControl.cs" />
      <Compile Include="Assets\c#\角色\ColliderCheck.cs" />
@@ -80,6 +81,7 @@
      <Compile Include="Assets\c#\動畫\EnterAim.cs" />
      <Compile Include="Assets\c#\角色\PlayerHealth.cs" />
      <Compile Include="Assets\c#\角色\PlayerAttack.cs" />
+     <Compile Include="Assets\c#\菜單\DieUI.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

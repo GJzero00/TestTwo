@@ -14,8 +14,7 @@ public class KeyDowneffect : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) || (Input.GetKeyDown(KeyCode.DownArrow))
-           || (Input.GetKeyDown(KeyCode.W) )|| (Input.GetKeyDown(KeyCode.S)))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || (Input.GetKeyDown(KeyCode.DownArrow)) )
         {
             audioSource.Play();    
         }

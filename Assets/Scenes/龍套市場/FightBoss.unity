@@ -785,6 +785,10 @@ PrefabInstance:
       propertyPath: dieUI
       value: 
       objectReference: {fileID: 945163029}
+    - target: {fileID: 2671178555291460896, guid: c40894d04f632514f96aa675cefad767, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1742151730}
     - target: {fileID: 2727488647963935268, guid: c40894d04f632514f96aa675cefad767, type: 3}
       propertyPath: health
       value: 1
@@ -820,6 +824,18 @@ PrefabInstance:
     - target: {fileID: 4483794719773508257, guid: c40894d04f632514f96aa675cefad767, type: 3}
       propertyPath: AttackTime
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483794719773508257, guid: c40894d04f632514f96aa675cefad767, type: 3}
+      propertyPath: enemyproperty
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483794719773508257, guid: c40894d04f632514f96aa675cefad767, type: 3}
+      propertyPath: playerproperty
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483794719773508259, guid: c40894d04f632514f96aa675cefad767, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4483794719773508270, guid: c40894d04f632514f96aa675cefad767, type: 3}
       propertyPath: m_Enabled
@@ -1080,7 +1096,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 772013867, guid: c40894d04f632514f96aa675cefad767, type: 3}
     - {fileID: 0}
-    - {fileID: 2671178555291460896, guid: c40894d04f632514f96aa675cefad767, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c40894d04f632514f96aa675cefad767, type: 3}
 --- !u!1001 &456343408
 PrefabInstance:
@@ -1625,6 +1640,10 @@ PrefabInstance:
     - target: {fileID: 4592920651925975018, guid: 980ce7fa823d24b4895452d791aa3dac, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592920651925975023, guid: 980ce7fa823d24b4895452d791aa3dac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4592920652005114291, guid: 980ce7fa823d24b4895452d791aa3dac, type: 3}
       propertyPath: m_IsActive
@@ -2971,9 +2990,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bbe00e0f791dda49b52068a130c9d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 1
   damage: 2
-  speed: 0
+  speed: 2
   radius: 20
 --- !u!1001 &1810183004
 PrefabInstance:

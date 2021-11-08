@@ -26,6 +26,7 @@ public class CD : MonoBehaviour
         {
             timer += Time.deltaTime;
             filledImage.fillAmount = (coldTime - timer) / coldTime;
+            
             if(timer >= coldTime)
             {
                 filledImage.fillAmount = 0;

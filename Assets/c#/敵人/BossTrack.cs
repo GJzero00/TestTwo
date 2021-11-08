@@ -7,9 +7,9 @@ public class BossTrack : Enemy
     public float speed;
     public float radius;
 
+
     private Transform playerTransform;
 
-    private GameObject Boss;
 
     public void Start()
     {
@@ -30,7 +30,7 @@ public class BossTrack : Enemy
             {
                 
                 transform.position = Vector2.MoveTowards(transform.position,
-               playerTransform.position, speed * Time.deltaTime);
+                playerTransform.position, speed * Time.deltaTime);
 
             }
 
