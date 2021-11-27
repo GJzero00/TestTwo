@@ -22,7 +22,8 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    
+        Black();
+        White();
     }
     public void DamegePlayer(int damage)
     { 
@@ -43,5 +44,20 @@ public class PlayerHealth : MonoBehaviour
     void StopDieMove()
     {
         playercontroller.enabled = false;
+    }
+   
+   void Black()
+    {
+        anim.SetBool("Bdle", true);
+        anim.SetBool("Wdle", false);
+
+
+    }
+   void White()
+    {
+        anim.SetBool("Wdle", true);
+        anim.SetBool("Bdle", false);
+
+
     }
 }

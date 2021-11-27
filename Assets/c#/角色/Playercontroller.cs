@@ -11,19 +11,29 @@ public class Playercontroller : MonoBehaviour
     public Collider2D coll;
     
     public float speed, jumpForce;
+    private float horizontalMove;
     public Transform groundCheck;
     public LayerMask ground;
     // public int Coin, Key;
 
 
     public Text CoinNum;
-  
 
-    public bool isGround, isJump;
+    [Header("CD的UI組件")]
+    public Image cdImage;
+
+    [Header("Dash參數")]
+    public float dashTime; //dash時長
+    private float dashTimeLeft; //衝鋒剩餘時間
+    private float lastDash = -10f;//上一次dash時間點
+    public float dashCoolDown;
+    public float dashSpeed;
+
+    public bool isGround, isJump,isDashing;
     
     bool jumpPressed;
     int jumpCount;
-
+     
 
 
 
@@ -42,13 +52,28 @@ public class Playercontroller : MonoBehaviour
         {
             jumpPressed = true;
         }
-        
+
         //attack();
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            if(Time.time >= (lastDash + dashCoolDown))
+            {
+                //可以執行dash
+                ReadyToDash();
+            }
+        }
+
+        cdImage.fillAmount -= 1.0f / dashCoolDown * Time.deltaTime;
+
     }
     public void FixedUpdate()
     {
 
         isGround = Physics2D.OverlapCircle(groundCheck.position, 0.1f, ground);
+        Dash();
+        if (isDashing)
+            return;
 
         GroundMovement();
 
@@ -59,9 +84,9 @@ public class Playercontroller : MonoBehaviour
         
 
     }
-    public  void GroundMovement()
+    void GroundMovement()
     {
-        float horizontalMove = Input.GetAxisRaw("Horizontal");
+        horizontalMove = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontalMove * speed, rb.velocity.y);
 
         if (horizontalMove != 0)
@@ -110,6 +135,8 @@ public class Playercontroller : MonoBehaviour
         }
     }
 
+
+
     /* private void OnTriggerEnter2D(Collider2D other)
     {
        
@@ -153,4 +180,35 @@ public class Playercontroller : MonoBehaviour
 
 
     }*/
+
+   void ReadyToDash()
+    {
+        isDashing = true;
+
+        dashTimeLeft = dashTime;
+
+        lastDash = Time.time;
+
+        cdImage.fillAmount = 1;
+    }
+
+    void Dash()
+    {
+        if (isDashing)
+        {
+            if(dashTimeLeft > 0)
+            {
+                rb.velocity = new Vector2(dashSpeed * horizontalMove, rb.velocity.y);
+
+                dashTimeLeft -= Time.deltaTime;
+
+                ShadowPool.instance.GetFormPool();
+            }
+        }
+        if(dashTimeLeft <= 0)
+        {
+            isDashing = false;
+        }
+
+    }
 }

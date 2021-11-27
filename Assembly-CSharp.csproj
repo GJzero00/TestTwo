@@ -78,6 +78,7 @@
      <Compile Include="Assets\c#\音樂C#\Volume1.cs" />
      <Compile Include="Assets\c#\敵人\CBoss.cs" />
      <Compile Include="Assets\c#\EnterHome.cs" />
+     <Compile Include="Assets\c#\角色\ShadowSprite.cs" />
      <Compile Include="Assets\c#\動畫\EnterAim.cs" />
      <Compile Include="Assets\c#\角色\PlayerHealth.cs" />
      <Compile Include="Assets\c#\角色\PlayerAttack.cs" />

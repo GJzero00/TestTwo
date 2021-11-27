@@ -1,5 +1,5 @@
 sceneSetups:
-- path: "Assets/Scenes/\u9F8D\u5957\u5E02\u5834/FightBoss.unity"
+- path: Assets/Scenes/test/frist.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

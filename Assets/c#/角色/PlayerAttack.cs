@@ -19,8 +19,8 @@ public class PlayerAttack : MonoBehaviour
     private Animator anim;
     private PolygonCollider2D collider2D;
 
-    bool SwitchQ;
-
+    bool SwitchS;
+    bool isAnim;
 
 
 
@@ -35,11 +35,13 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
+       
+            attack();
 
-        attack();
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            if (SwitchQ)
+
+            if (SwitchS)
             {
                 Black();
 
@@ -52,23 +54,28 @@ public class PlayerAttack : MonoBehaviour
 
     }
 
-    private void White()
+    void White()
     {
         playerproperty = 1;
-        SwitchQ = true;
+        SwitchS = true;
+        anim.SetTrigger("S");
+        anim.SetBool("W", true);
+        anim.SetBool("B", false);
     }
 
-    private void Black()
+    void Black()
     {
         playerproperty = 0;
-        SwitchQ = false;
+        SwitchS = false;
+        anim.SetTrigger("S");
+        anim.SetBool("B", true);
+        anim.SetBool("W", false);
     }
 
     void attack()
     {
         if (Input.GetKeyDown(KeyCode.D))
         {
-
             anim.SetTrigger("Attack");
             anim.SetBool("idle", false);
             StartCoroutine(StarAttack());
@@ -93,11 +100,7 @@ public class PlayerAttack : MonoBehaviour
         collider2D.enabled = false;
 
     }
-
-
-
-
-
+  
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("enemies"))
@@ -105,6 +108,4 @@ public class PlayerAttack : MonoBehaviour
             other.GetComponent<BossTrack>().TackDamage(damage, playerproperty, enemyproperty);
         }
     }
-}
-
-
+ }

@@ -6,10 +6,12 @@ ScriptsOnlyBuild:
     - CD
     - CameraControl
     - DialogSystem
+    - DieUI
     - EnterAim
     - EnterHome
     - FullScreenControl
     - JRTDia
+    - KeyCheck
     - KeyDowneffect
     - Next
     - NextScence
@@ -39,7 +41,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
-    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintPaletteClipboard
     - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
@@ -77,8 +78,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -255,9 +258,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4642}
     - Class: 114
-      Script: {instanceID: 5004}
+      Script: {instanceID: 5006}
     - Class: 114
-      Script: {instanceID: 5254}
+      Script: {instanceID: 5258}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -322,9 +325,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3552}
     - Class: 114
-      Script: {instanceID: 5004}
+      Script: {instanceID: 5006}
     - Class: 114
-      Script: {instanceID: 5254}
+      Script: {instanceID: 5258}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -399,9 +402,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3166}
     - Class: 114
-      Script: {instanceID: 4992}
+      Script: {instanceID: 4994}
     - Class: 114
-      Script: {instanceID: 5402}
+      Script: {instanceID: 5406}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -476,9 +479,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3628}
     - Class: 114
-      Script: {instanceID: 5004}
+      Script: {instanceID: 5006}
     - Class: 114
-      Script: {instanceID: 5254}
+      Script: {instanceID: 5258}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -551,9 +554,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4878}
     - Class: 114
-      Script: {instanceID: 5004}
+      Script: {instanceID: 5006}
     - Class: 114
-      Script: {instanceID: 5254}
+      Script: {instanceID: 5258}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -628,6 +631,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1490}
     - Class: 114
+      Script: {instanceID: 1502}
+    - Class: 114
       Script: {instanceID: 1770}
     - Class: 114
       Script: {instanceID: 1954}
@@ -660,15 +665,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4112}
     - Class: 114
-      Script: {instanceID: 5004}
+      Script: {instanceID: 5006}
     - Class: 114
-      Script: {instanceID: 5050}
+      Script: {instanceID: 5052}
     - Class: 114
-      Script: {instanceID: 5254}
+      Script: {instanceID: 5258}
     - Class: 114
-      Script: {instanceID: 5638}
+      Script: {instanceID: 5642}
     - Class: 114
-      Script: {instanceID: 5720}
+      Script: {instanceID: 5724}
+    - Class: 114
+      Script: {instanceID: 6038}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -783,17 +790,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4170}
     - Class: 114
-      Script: {instanceID: 5004}
+      Script: {instanceID: 5006}
     - Class: 114
-      Script: {instanceID: 5050}
+      Script: {instanceID: 5052}
     - Class: 114
-      Script: {instanceID: 5254}
+      Script: {instanceID: 5258}
     - Class: 114
-      Script: {instanceID: 5474}
+      Script: {instanceID: 5478}
     - Class: 114
-      Script: {instanceID: 5638}
+      Script: {instanceID: 5642}
     - Class: 114
-      Script: {instanceID: 5720}
+      Script: {instanceID: 5724}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -908,17 +915,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4112}
     - Class: 114
-      Script: {instanceID: 5004}
+      Script: {instanceID: 5006}
     - Class: 114
-      Script: {instanceID: 5050}
+      Script: {instanceID: 5052}
     - Class: 114
-      Script: {instanceID: 5254}
+      Script: {instanceID: 5258}
     - Class: 114
-      Script: {instanceID: 5350}
+      Script: {instanceID: 5354}
     - Class: 114
-      Script: {instanceID: 5638}
+      Script: {instanceID: 5642}
     - Class: 114
-      Script: {instanceID: 5720}
+      Script: {instanceID: 5724}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -970,6 +977,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: StandaloneInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: ceff1e32feaccfb24ba709e331502475
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: KeyCheck
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -1770,6 +1783,12 @@ ScriptsOnlyBuild:
     className: CinemachineStoryboard
   - hash:
       serializedVersion: 2
+      Hash: af411f4db28160ed79a8e5202839ba12
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SwitchQ
+  - hash:
+      serializedVersion: 2
       Hash: ffd3ed4fcd23b3e7745287c99a637247
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -1828,6 +1847,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
     className: SpriteLibraryAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ColliderCheck
   - hash:
       serializedVersion: 2
       Hash: 56df1fa7cea034df9863fe5a24200a32
@@ -1908,7 +1933,7 @@ ScriptsOnlyBuild:
     className: CinemachineRecomposer
   - hash:
       serializedVersion: 2
-      Hash: c7a1cfbcd815f35b6700d8538ef4094e
+      Hash: d724f7ae8a147cdddd06133d612e4c02
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerHealth
@@ -1926,7 +1951,7 @@ ScriptsOnlyBuild:
     className: BufferManager
   - hash:
       serializedVersion: 2
-      Hash: 64589836d4675431320616e8d9b9c7e3
+      Hash: c7bdf27e5f2148fc64fc6ae0e353f293
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerAttack
@@ -1978,6 +2003,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: 63c09b138758fc79b9c085cacfd07c5f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DieUI
   platform: 19
   scenePathNames:
   - "Assets/Scenes/\u767B\u5165/mainsceen.unity"
@@ -1990,4 +2021,4 @@ ScriptsOnlyBuild:
   - "Assets/Scenes/\u9F8D\u5957\u5E02\u5834/PassAim.unity"
   - "Assets/Scenes/\u9F8D\u5957\u5E02\u5834/BOSSAim.unity"
   - "Assets/Scenes/\u9F8D\u5957\u5E02\u5834/FightBoss.unity"
-  playerPath: "C:/Users/user/Desktop/\u5EFA\u7F6E/Della.exe"
+  playerPath: C:/Users/user/Desktop/1/Della.exe

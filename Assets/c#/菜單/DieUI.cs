@@ -20,13 +20,13 @@ public class DieUI : MonoBehaviour
     
     void Update()
     {
-        if (player != null)
-        {
-            dieUI.SetActive(false);
-        }
-        else
+        if (player == null)
         {
             dieUI.SetActive(true);
         }
-    }   
+        else
+        {
+            dieUI.SetActive(false);
+        }
+    }     
 }
