@@ -312,6 +312,10 @@ PrefabInstance:
       propertyPath: enemyproperty
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 320464457462424332, guid: 56e028c49d1fcba4fb52a47681f373a9, type: 3}
+      propertyPath: attackCoolDown
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1584855188055086147, guid: 56e028c49d1fcba4fb52a47681f373a9, type: 3}
       propertyPath: m_Sprite
       value: 

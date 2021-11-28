@@ -9,35 +9,42 @@ using UnityEngine.UI;
 public class PlayerAttack : MonoBehaviour
 {
     public int damage;
-    public int damagelight;
-    public float starTime;
-    public float time;
+    public float time;//時長
+    public float starTime;//開始顯示時間
+    private float lastAttack = -10f;
+    public float attackCoolDown;
+
     public int playerproperty;//black=0 white=1;
     public int enemyproperty;
-
 
     private Animator anim;
     private PolygonCollider2D collider2D;
 
-    bool SwitchS;
-    bool isAnim;
+    public bool SwitchS;
+    public bool isattackCD;
 
 
 
 
 
-    void Start()
+    void OnEnable()
     {
         anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         collider2D = GetComponent<PolygonCollider2D>();
 
+        starTime = Time.time;
     }
 
     void Update()
     {
-       
-            attack();
-
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            if (Time.time >= (lastAttack + attackCoolDown))
+            {
+                attack();
+            }
+            NOattack();
+        }
         if (Input.GetKeyDown(KeyCode.S))
         {
 
@@ -56,6 +63,7 @@ public class PlayerAttack : MonoBehaviour
 
     void White()
     {
+
         playerproperty = 1;
         SwitchS = true;
         anim.SetTrigger("S");
@@ -74,18 +82,20 @@ public class PlayerAttack : MonoBehaviour
 
     void attack()
     {
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            anim.SetTrigger("Attack");
-            anim.SetBool("idle", false);
-            StartCoroutine(StarAttack());
-        }
-        else
-        {
-            anim.SetBool("idle", true);
-            anim.SetTrigger("idle");
-        }
+        isattackCD = true;
+        starTime = time;
+        lastAttack = Time.time;
+        anim.SetTrigger("Attack");
+        anim.SetBool("attack", true);
+        anim.SetBool("idle", false);
+        StartCoroutine(StarAttack());
     }
+    void NOattack()
+    {
+        anim.SetBool("idle", true);
+        anim.SetTrigger("idle");
+    }
+
     IEnumerator StarAttack()
     {
         yield return new WaitForSeconds(starTime);
@@ -100,7 +110,7 @@ public class PlayerAttack : MonoBehaviour
         collider2D.enabled = false;
 
     }
-  
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("enemies"))
@@ -108,4 +118,4 @@ public class PlayerAttack : MonoBehaviour
             other.GetComponent<BossTrack>().TackDamage(damage, playerproperty, enemyproperty);
         }
     }
- }
+}
